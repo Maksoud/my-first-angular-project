@@ -20,7 +20,7 @@ export class CockpitComponent implements OnInit {
 
   onAddServer(serverNameInput: HTMLInputElement) {
 
-    this.newServerName    = serverNameInput.value;
+    this.newServerName = serverNameInput.value;
   
     this.serverCreated.emit({
       serverName:    this.newServerName,
@@ -31,9 +31,9 @@ export class CockpitComponent implements OnInit {
 
   onAddBlueprint(serverNameInput: HTMLInputElement) {
 
-    this.newServerName    = serverNameInput.value;
+    this.newServerName = serverNameInput.value;
 
-    this.serverCreated.emit({
+    this.blueprintCreated.emit({
       serverName:    this.newServerName,
       serverContent: this.newServerContent.nativeElement.value
     });

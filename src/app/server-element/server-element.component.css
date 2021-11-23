@@ -1,3 +1,6 @@
-p {
-    color: red ;
+p strong {
+    color: rgb(0, 0, 141) ;
+}
+p em {
+    color: rgb(124, 124, 124);
 }
