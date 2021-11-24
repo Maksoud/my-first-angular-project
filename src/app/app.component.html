@@ -6,7 +6,24 @@
     <div class="row">
         <div class="col-xs-12">
             <h2><small>List of Servers and Blueprints</small></h2>
-            <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement"></app-server-element>
+            <button class="btn btn-warning" (click)="onChangeFirst()">
+                Change First Element
+            </button>
+            <button class="btn btn-danger" (click)="onDestroyFirst()">
+                Destroy First Element
+            </button>
+            <app-server-element 
+                *ngFor="let serverElement of serverElements" 
+                [srvElement]="serverElement"
+                [name]="serverElement.name">
+                <!-- To use your code here, instead of in the server-element.component.html file, it's necessary to inform the tag <ng-content></ng-content> there -->
+            </app-server-element>
+            <div class="inline-block">
+                Total of Servers <strong><span #countServers>0</span></strong>
+            </div>
+            <div class="inline-block">
+                Total of Blueprints <strong><span #countBlueprints>0</span></strong>
+            </div>
         </div>
     </div>
 </div>
